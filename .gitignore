@@ -1,0 +1,35 @@
+# Build folders 
+**/[Bb]in/
+**/[Oo]bj/
+
+# NuGet Packages Directory
+.nuget/**
+packages/**
+
+
+# mstest test results
+TestResults
+
+# User-state files
+*.suo
+*.user
+*.sln.docstates
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+
+# WebDriver third-party binaries
+
+chromedriver.exe
+IEDriverServer.exe
+phantomjs.exe
+selenium-server-standalone-*
+
+# MS Test results
+TestResults
+
+# XWT and GTK# assemblies
+vendor/**
