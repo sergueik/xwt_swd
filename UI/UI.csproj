@@ -154,6 +154,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Buttons.cs" />
+    <Compile Include="CheckBox.cs" />
     <Compile Include="MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -162,6 +163,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadoButton.cs" />
+    <Compile Include="SimpleBox.cs" />
+    <Compile Include="ListBox.cs" />
+    <Compile Include="ListView2.cs" />
+    <Compile Include="ListViews.cs" />
+    <Compile Include="Tables.cs" />
+    <Compile Include="Frames.cs" />
+    <Compile Include="NoteBook.cs" />
+    <Compile Include="Unsorted.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
