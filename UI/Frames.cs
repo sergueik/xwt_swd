@@ -12,11 +12,13 @@ namespace UI
 
     public class Frames : VBox
     {
+    	
         public Frames()
         {
             Frame f = new Frame();
             f.Label = "Simple widget box";
             f.Content = new SimpleBox(50);
+            	
             PackStart(f);
 
             f = new Frame();

@@ -12,7 +12,7 @@ namespace UI
 		[STAThread]
 		static void Main(string[] args)
 		{
-			Application.Initialize(ToolkitType.Gtk);
+			Application.Initialize(ToolkitType.Wpf);
 			Window MainWindow = new Window()
 			{
 				Title = "Xwt Demo Application",

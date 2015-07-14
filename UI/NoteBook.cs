@@ -22,6 +22,9 @@ namespace UI
             nb.Add(new RadioButtonSample(), "Locators");
             nb.Add(new MyTestWidget(), "Source Code");
             nb.Add(new Frames(), "HTML Source");
+            nb.Add(new ScrollWindowSample(), "ScrollWindow");
+                        nb.Add(new TextEntries (), "Playground");
+            
             nb.TabOrientation = NotebookTabOrientation.Top;
             PackStart(nb, true);
         }
