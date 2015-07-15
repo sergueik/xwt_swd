@@ -3,16 +3,41 @@ using System.Collections;
 using Xwt;
 using Xwt.Drawing;
 using UI;
+using System.IO;
+/*
+using OxyPlot;
+using OxyPlot.Axes;
+using OxyPlot.Series;
+*/
+using System.Data;
+using System.Data.SQLite;
+using SQLite.Utils;
+
 
 // https://github.com/mono/xwt/tree/master/TestApps/Samples
 namespace UI
 {
 	class Program
 	{
+		
+        private static string dataSource;
+        private static string tableName; 
 		[STAThread]
 		static void Main(string[] args)
 		{
-			Application.Initialize(ToolkitType.Wpf);
+			
+			            string dataFolderPath = Directory.GetCurrentDirectory();
+            string database = String.Format("{0}\\data.db", dataFolderPath);
+            dataSource = "data source=" + database;
+            tableName = "product";
+
+			tableName = "product";
+            
+            PlotHelper.createTable(dataSource,tableName);
+            PlotHelper.TestConnection(dataSource);
+
+			// TODO: add Xwt.WPF.dll to vendor directory
+			Application.Initialize(ToolkitType.Gtk);
 			Window MainWindow = new Window()
 			{
 				Title = "Xwt Demo Application",
