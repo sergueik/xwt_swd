@@ -97,9 +97,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
     </Reference>
-    <Reference Include="OxyPlot">
-      <HintPath>..\..\Netling\packages\OxyPlot.Core.2015.1.943-alpha\lib\net40\OxyPlot.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Collections" />
     <Reference Include="System.Core" />
@@ -114,7 +111,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <!--
     <Compile Include="PlotHelper.cs" />
+-->
     <Compile Include="SQLiteColumn.cs" />
     <Compile Include="SQLiteColumnList.cs" />
     <Compile Include="SQLiteHelper.cs" />

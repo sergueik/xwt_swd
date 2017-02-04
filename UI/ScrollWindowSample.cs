@@ -31,12 +31,12 @@ namespace UI
 {
 	public class ScrollWindowSample: VBox
 	{
-		public ScrollWindowSample ()
+		public ScrollWindowSample()
 		{
-			ScrollView v4 = new ScrollView ();
-			PackStart (v4, fill:true, expand:true);
-			var sb = new ScrollableCanvas ();
-			var te = new TextEntries ();
+			ScrollView v4 = new ScrollView();
+			PackStart(v4, fill: true, expand: true);
+			var sb = new ScrollableCanvas();
+			var te = new TextEntries();
 			v4.Content = te;
 			v4.VerticalScrollPolicy = ScrollPolicy.Always;
 		}
@@ -48,27 +48,27 @@ namespace UI
 		ScrollAdjustment vscroll;
 		int imageSize = 500;
 		
-		public ScrollableCanvas ()
+		public ScrollableCanvas()
 		{
 			MinWidth = 100;
 			MinHeight = 100;
 		}
 		
-		protected override void OnDraw (Context ctx, Rectangle dirtyRect)
+		protected override void OnDraw(Context ctx, Rectangle dirtyRect)
 		{
-			ctx.Save ();
-			ctx.Translate (-hscroll.Value, -vscroll.Value);
-			ctx.Rectangle (new Rectangle (0, 0, imageSize, imageSize));
-			ctx.SetColor (Xwt.Drawing.Colors.White);
-			ctx.Fill ();
-			ctx.Arc (imageSize / 2, imageSize / 2, imageSize / 2 - 20, 0, 360);
-			ctx.SetColor (new Color (0,0,1));
-			ctx.Fill ();
-			ctx.Restore ();
+			ctx.Save();
+			ctx.Translate(-hscroll.Value, -vscroll.Value);
+			ctx.Rectangle(new Rectangle(0, 0, imageSize, imageSize));
+			ctx.SetColor(Xwt.Drawing.Colors.White);
+			ctx.Fill();
+			ctx.Arc(imageSize / 2, imageSize / 2, imageSize / 2 - 20, 0, 360);
+			ctx.SetColor(new Color(0, 0, 1));
+			ctx.Fill();
+			ctx.Restore();
 
-			ctx.Rectangle (0, 0, Bounds.Width, 30);
-			ctx.SetColor (new Color (1, 0, 0, 0.5));
-			ctx.Fill ();
+			ctx.Rectangle(0, 0, Bounds.Width, 30);
+			ctx.SetColor(new Color(1, 0, 0, 0.5));
+			ctx.Fill();
 		}
 		
 		protected override bool SupportsCustomScrolling {
@@ -77,7 +77,7 @@ namespace UI
 			}
 		}
 		
-		protected override void SetScrollAdjustments (ScrollAdjustment horizontal, ScrollAdjustment vertical)
+		protected override void SetScrollAdjustments(ScrollAdjustment horizontal, ScrollAdjustment vertical)
 		{
 			hscroll = horizontal;
 			vscroll = vertical;
@@ -86,18 +86,18 @@ namespace UI
 			hscroll.PageIncrement = Bounds.Width;
 			hscroll.PageSize = Bounds.Width;
 			hscroll.ValueChanged += delegate {
-				QueueDraw ();
+				QueueDraw();
 			};
 			
 			vscroll.UpperValue = imageSize;
 			vscroll.PageIncrement = Bounds.Height;
 			vscroll.PageSize = Bounds.Height;
 			vscroll.ValueChanged += delegate {
-				QueueDraw ();
+				QueueDraw();
 			};
 		}
 		
-		protected override void OnBoundsChanged ()
+		protected override void OnBoundsChanged()
 		{
 			if (vscroll == null)
 				return;

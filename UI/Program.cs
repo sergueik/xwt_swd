@@ -4,13 +4,7 @@ using Xwt;
 using Xwt.Drawing;
 using UI;
 using System.IO;
-/*
-using OxyPlot;
-using OxyPlot.Axes;
-using OxyPlot.Series;
-*/
 using System.Data;
-using System.Data.SQLite;
 using SQLite.Utils;
 
 
@@ -20,43 +14,35 @@ namespace UI
 	class Program
 	{
 		
-        private static string dataSource;
-        private static string tableName; 
+		private static string dataSource;
+		private static string tableName;
 		[STAThread]
 		static void Main(string[] args)
 		{
 			
-			            string dataFolderPath = Directory.GetCurrentDirectory();
-            string database = String.Format("{0}\\data.db", dataFolderPath);
-            dataSource = "data source=" + database;
-            tableName = "product";
+			string dataFolderPath = Directory.GetCurrentDirectory();
+			string database = String.Format("{0}\\data.db", dataFolderPath);
+			dataSource = "data source=" + database;
+			tableName = "product";
 
 			tableName = "product";
             
-            PlotHelper.createTable(dataSource,tableName);
-            PlotHelper.TestConnection(dataSource);
-
-			// TODO: add Xwt.WPF.dll to vendor directory
 			Application.Initialize(ToolkitType.Gtk);
-			Window MainWindow = new Window()
-			{
+			Window MainWindow = new Window() {
 				Title = "Xwt Demo Application",
 				Width = 500,
 				Height = 400
 			};
-			MainWindow.CloseRequested += (o, e) =>
-			{
+			MainWindow.CloseRequested += (o, e) => {
 				Application.Exit();
 			};
 			Menu MainMenu = new Menu();
 			RichTextView TextView = new RichTextView();
 			MenuItem FileOpenMenuItem = new MenuItem("???????");
 			Menu FileMenu = new Menu();
-			FileOpenMenuItem.Clicked += (o, e) =>
-			{
+			FileOpenMenuItem.Clicked += (o, e) => {
 				OpenFileDialog Dialog = new OpenFileDialog("??????? ????");
-				if (Dialog.Run(MainWindow))
-				{
+				if (Dialog.Run(MainWindow)) {
 					TextView.LoadFile(Dialog.FileName, Xwt.Formats.TextFormat.Markdown);
 				}
 			};
