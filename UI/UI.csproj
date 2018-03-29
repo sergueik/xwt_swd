@@ -34,7 +34,7 @@
   <ItemGroup>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SQLite">
-      <HintPath>..\..\Netling\packages\System.Data.SQLite.Core.1.0.97.0\lib\net40\System.Data.SQLite.dll</HintPath>
+	<HintPath>..\packages\System.Data.SQLite.Core.1.0.105.2\lib\net40\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -45,16 +45,16 @@
       <HintPath>..\packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.dll</HintPath>
     </Reference>
     <Reference Include="Xwt">
-      <HintPath>..\packages\Xwt.0.1.0\lib\net40\Xwt.dll</HintPath>
+      <HintPath>..\packages\Xwt.0.2.100\lib\net40\Xwt.dll</HintPath>
     </Reference>
     <Reference Include="Xwt.Gtk">
-      <HintPath>..\packages\Xwt.0.1.0\lib\net40\Xwt.Gtk.dll</HintPath>
+      <HintPath>..\packages\Xwt.Gtk.0.2.100\lib\net40\Xwt.Gtk.dll</HintPath>
     </Reference>
     <Reference Include="Xwt.Gtk.Windows">
-      <HintPath>..\packages\Xwt.0.1.0\lib\net40\Xwt.Gtk.Windows.dll</HintPath>
+      <HintPath>..\packages\Xwt.Gtk.Windows.0.2.100\lib\net40\Xwt.Gtk.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Xwt.WPF">
-      <HintPath>..\packages\Xwt.0.1.0\lib\net40\Xwt.WPF.dll</HintPath>
+      <HintPath>..\packages\Xwt.WPF.0.2.100\lib\net40\Xwt.WPF.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
